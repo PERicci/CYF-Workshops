@@ -11,6 +11,8 @@
 // Part 2: Use the Node REPL to check your answers to Part 1)
 // Part 3: Using Part 2, explain the difference between Math.trunc() and Math.floor() in your own words
 
+// b) 170 / 170
+// c) -0 / -1
+// d) -8 / -9
 
-
-
+// Math.trunc() gets the integer, ignoring decimals. Math.floor() gets the nearest integer before the value.
