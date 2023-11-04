@@ -17,4 +17,4 @@ confession = confession.replaceAll(secret,'x'.repeat(secret.length));
 // b) Find all "cake" (variable secret) and replace for "xxxx" (x repeated 4 times due the secret.length)
 // c) 2 (first is the element to look for and the second one is the one to replace one with)
 // d) 1 (amount of repetitions)
-// e) statement
+// e) let statement
