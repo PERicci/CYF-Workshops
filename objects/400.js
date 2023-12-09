@@ -1,6 +1,10 @@
 // Predict and explain...
 // What will happen when this program is run?
+// The function will add chicken for both persons because the if statement check the presence
+// of a key called eatsMeat, not if eatsMeat is true.
 // Check your prediction and explanation by running the program.
+// I didn't realize in the if statement, the push method for chicken misses the key ingredients.
+// I'm wrong about the if statement consider the key eatsMeat and not its value.
 // Fix anything that needs fixing.
 
 function printSaladRecipe(forPerson) {
@@ -17,7 +21,8 @@ function printSaladRecipe(forPerson) {
     };
 
     if (forPerson.eatsMeat) {
-        saladRecipe.push("chicken");
+        // saladRecipe.push("chicken");
+        saladRecipe.ingredients.push("chicken");
         saladRecipe.steps.push("Mix in the chicken");
     }
 
