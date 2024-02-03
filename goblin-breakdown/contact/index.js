@@ -7,27 +7,27 @@ const jsonObject = async (api) => {
 }
 
 // Extract the address and phone number from the JSON object
-const extractAddress = (api) => {
-  const data = jsonObject(api);
-  const address = data.address;
+const extractAddress = async (api) => {
+  const data = await jsonObject(api);
+  const address = await data.address;
   return address
 }
-const extractPhoneNumber = (api) => {
-  const data = jsonObject(api)
-  const phoneNumber = data.phone;
+const extractPhoneNumber = async (api) => {
+  const data = await jsonObject(api)
+  const phoneNumber = await data.phone;
   return phoneNumber
 }
 
 // Format the address in the UK address format
 const formatAddress = (address) => {
-  
+
 };
 
 // Format the phone number in the UK phone number format
 const formatPhoneNumber = (phoneNumber) => { };
 
 // Convert the formatted address and phone number into HTML format
-const convertToHtml = (address, phoneNumber) => {
+const convertToHtml = (address, phoneNumber, elementId) => {
   const template = document
     .querySelector(templateSelector)
     .content.cloneNode(true);
@@ -39,10 +39,12 @@ const convertToHtml = (address, phoneNumber) => {
 };
 
 // Display the formatted address and phone number as HTML on the web page
-const render = (api, elementId) => {
-  const address = extractAddress(api);
-  const phone = extractPhoneNumber(api);
+const render = async (api, elementId) => {
+  const address = await extractAddress(api);
+  const phone = await extractPhoneNumber(api);
 
-  const html = convertToHtml(address, phone);
+  const html = convertToHtml(address, phone, elementId);
   document.body.appendChild(html);
 }
+
+render("./data.json", "#contact-template")
