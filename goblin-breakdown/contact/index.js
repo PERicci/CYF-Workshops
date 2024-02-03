@@ -20,4 +20,4 @@ const formatPhoneNumber = (phoneNumber) => { };
 const convertToHtml = (address, phoneNumber) => { };
 
 // Display the formatted address and phone number as HTML on the web page
-const render = (html, elementId) => { }
+const render = (api, elementId) => { }
