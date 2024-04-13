@@ -45,8 +45,10 @@ app.get(`${endpoints.albums}/:albumId`, (req, res) => {
 
 app.post(endpoints.albums, (req, res) => {
   const newAlbum = req.body;
+  console.log(newAlbum)
   albumsData.push(newAlbum);
   res.redirect(endpoints.albums);
+  console.log("Album added successfully!");
 })
 
 //delete routes
@@ -54,7 +56,9 @@ app.post(endpoints.albums, (req, res) => {
 app.delete(`${endpoints.albums}/:albumId`, (req, res) => {
   const albumId = req.params.albumId;
   const index = albumsData.findIndex(album => album.albumId === albumId);
+
   if (index !== -1) {
+    console.log(albumsData[index])
     albumsData.splice(index, 1);
     res.redirect(endpoints.albums);
     console.log("Album deleted successfully!");
