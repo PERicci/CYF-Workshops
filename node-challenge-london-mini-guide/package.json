@@ -1,0 +1,25 @@
+{
+  "name": "london-mini-guide",
+  "version": "1.0.0",
+  "description": "Web app to show information about some London's boroughs",
+  "main": "/server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PERicci/CYF-Workshops.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PERicci/CYF-Workshops/issues"
+  },
+  "homepage": "https://github.com/PERicci/CYF-Workshops#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
